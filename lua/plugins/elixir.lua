@@ -35,17 +35,15 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        ensure_installed = {
-          "eex",
-          "elixir",
-          "erlang",
-          "heex",
-          "html",
-          "javascript",
-          "json",
-          "tsx",
-          "typescript",
-        },
+        "eex",
+        "elixir",
+        "erlang",
+        "heex",
+        "html",
+        "javascript",
+        "json",
+        "tsx",
+        "typescript",
       })
     end,
   },
