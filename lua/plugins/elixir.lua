@@ -49,6 +49,9 @@ return {
   },
   {
     "L3MON4D3/LuaSnip",
+    dependencies = {
+      "kmarius/jsregexp",
+    },
     opts = function()
       -- Not actually running anything that modifies the snippet options, primarily just trying to configure
       -- snippets to be loaded
