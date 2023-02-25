@@ -49,8 +49,10 @@ return {
   },
   {
     "L3MON4D3/LuaSnip",
+    lazy = false,
     dependencies = {
       "kmarius/jsregexp",
+      build = "make install_jsregexp",
     },
     opts = function()
       -- Not actually running anything that modifies the snippet options, primarily just trying to configure
