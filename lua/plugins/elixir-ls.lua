@@ -1,13 +1,8 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
     opts = {
-      ---@type lspconfig.options
       servers = {
-        elixirls = {
-          filetypes = { "elixir", "eelixir", "heex" },
-        },
         tailwindcss = {
           init_options = {
             userLanguages = {
@@ -27,25 +22,6 @@ return {
         },
       },
     },
-  },
-  -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
-  -- would overwrite `ensure_installed` with the new value.
-  -- If you'd rather extend the default config, use the code below instead:
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "eex",
-        "elixir",
-        "erlang",
-        "heex",
-        "html",
-        "json",
-        "javascript",
-        "tsx",
-        "typescript",
-      })
-    end,
   },
   {
     "L3MON4D3/LuaSnip",
